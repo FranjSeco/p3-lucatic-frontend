@@ -118,7 +118,6 @@ export class CardComponent implements OnInit {
       this.dislike.dislikes(this.user, this.Yo._id).subscribe(
         () => {
           this.ngZone.run(() => this.router.navigateByUrl('/dislikes'));
-          window.location.reload();
         },
         (err) => {
           // console.log(err);
