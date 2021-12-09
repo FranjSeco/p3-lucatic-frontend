@@ -1,0 +1,25 @@
+<div class="content">
+  <div class="content-inside">
+    <div class="icon-content">
+      <img class="logo-icon" src="../assets/Lucatinder(SinFondo).png" />
+    </div>
+    <div class="div-form">
+      <div class="form">
+        <button class="register-but" mat-raised-button color="accent" routerLink='/'>Home</button><br />
+      
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label class="title">Email</mat-label>
+          <input matInput type="text" class="relleno" placeholder="Email" [(ngModel)]="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label class="title">Password</mat-label>
+          <input matInput type="password" class="relleno" placeholder="Password" [(ngModel)]="password">
+        </mat-form-field>
+
+        <button class="login-but" mat-raised-button color="primary" (click)="login()">Login</button><br />
+
+      </div>
+    </div>
+  </div>
+</div>

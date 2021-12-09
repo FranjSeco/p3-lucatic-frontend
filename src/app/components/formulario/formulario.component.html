@@ -1,0 +1,66 @@
+<div class="body">
+  <div class="form">
+    <h2>Modificar datos de {{datosPrevios.name}}</h2>
+    <p class="correo">({{datosPrevios.email}})</p>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label class="title">Nombre</mat-label>
+      <input matInput type="text" class="relleno" placeholder={{datosPrevios.name}} [(ngModel)]="datosPersonales.name">
+    </mat-form-field><br />
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label class="title">Edad</mat-label>
+      <input matInput type="text" class="relleno" placeholder=0 [(ngModel)]="datosPersonales.edad">
+    </mat-form-field><br />
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label class="title">Localidad</mat-label>
+      <input matInput type="text" class="relleno" placeholder=Localidad [(ngModel)]="datosPersonales.localidad">
+    </mat-form-field><br />
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label class="title">Foto</mat-label>
+      <input matInput type="text" class="relleno" placeholder="https://url.jpg" [(ngModel)]="datosPersonales.foto">
+    </mat-form-field><br />
+
+
+    <div class="wrap">
+      <form action="" class="formulario">
+        <div class="radio">
+          <p>Género
+
+            <input type="radio" id="Hombre" name="genero" value="Hombre" [(ngModel)]="datosPersonales.genero">
+            <label class="icon" for="hombre"><i class="fas fa-male"></i></label>
+
+            <input class="separate" type="radio" id="Mujer" name="genero" value="Mujer"
+              [(ngModel)]="datosPersonales.genero">
+            <label class="icon" for="mujer"><i class="fas fa-female"></i></label>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <p class="title">Hobbies</p>
+    <br>
+    <span class="hobbie title">
+      <input type="checkbox" id="Fumador" value="Fumador" [(ngModel)]="datosPersonales.fumador">
+      <label for="Fumador">Fumador</label>
+    </span>
+    <span class="hobbie">
+      <input type="checkbox" id="Deportista" value="Deportista" [(ngModel)]="datosPersonales.deportista">
+      <label for="Deportista"> Deportista</label><br>
+    </span><br>
+    <span class="hobbie">
+      <input type="checkbox" id="Cinefilo" value="Cinefilo" [(ngModel)]="datosPersonales.cinefilo">
+      <label for="Cinefilo"> Cinefilo</label>
+    </span>
+    <span class="hobbie">
+      <input type="checkbox" id="Playa" value="Playa" [(ngModel)]="datosPersonales.playa">
+      <label for="Playa"> Playa</label><br>
+    </span><br>
+    <br />
+    <button class="register-but" mat-raised-button color="accent" (click)="agregarDatosPersonales()"
+      routerLink='/display'>Enviar</button><br />
+
+  </div>
+</div>
